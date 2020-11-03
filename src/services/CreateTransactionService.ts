@@ -17,7 +17,7 @@ class CreateTransactionService {
   public execute({title, value, type}: Request): Transaction {
     // TODO
 
-    if(!['incomde', 'outcome'].includes(type)){
+    if(!['income', 'outcome'].includes(type)){
       throw new Error('Transaction Denied!')
     }
     const {total} = this.transactionsRepository.getBalance()
